@@ -6,7 +6,7 @@ import classes from './Nav.module.css';
 const Nav = () => {
   return (
     <nav>
-      <Container>
+      <Container className={classes.adjustments}>
         <Logo />
         <ul>
           <li>

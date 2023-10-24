@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   --light-black: #1f1f1f;
   --dark-black: #1a1a1a;
@@ -7,7 +11,6 @@
   --light-gray: #f1f1f1;
   --dark-red: #a34444;
   --red: #c63232;
-  box-sizing: border-box;
 }
 
 body {
