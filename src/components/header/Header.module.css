@@ -1,0 +1,32 @@
+.header {
+  font-family: 'Libre Baskerville', serif;
+  background-color: var(--light-black);
+  padding: 1.5rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.header ul {
+  margin: 2rem 0 0 0;
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.header ul li {
+  padding: 0 1.5rem;
+}
+
+.header ul li a {
+  letter-spacing: 0.125rem;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 1020px) {
+  .header ul {
+    margin: 0;
+  }
+}
