@@ -1,10 +1,10 @@
 import classes from './App.module.css';
-import Header from './components/header/Header';
+import Nav from './components/nav/Nav';
 
 function App() {
   return (
     <>
-      <Header />
+      <Nav />
     </>
   );
 }

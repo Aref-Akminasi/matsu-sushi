@@ -1,4 +1,4 @@
-.header {
+nav {
   font-family: 'Libre Baskerville', serif;
   background-color: var(--light-black);
   padding: 1.5rem 5rem;
@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.header ul {
+nav ul {
   margin: 2rem 0 0 0;
   list-style-type: none;
   display: flex;
@@ -14,11 +14,11 @@
   justify-content: space-between;
 }
 
-.header ul li {
+nav ul li {
   padding: 0 1.5rem;
 }
 
-.header ul li a {
+nav ul li a {
   letter-spacing: 0.125rem;
   color: white;
   font-size: 1rem;
@@ -26,7 +26,7 @@
 }
 
 @media screen and (min-width: 1020px) {
-  .header ul {
+  nav ul {
     margin: 0;
   }
 }
