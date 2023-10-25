@@ -10,23 +10,25 @@ const MenuCard = ({ data }) => {
         <div className={styles['card-info']}>
           <h3>{data.name}</h3>
           <p>{data.description}</p>
-          <span>€{data.price.toFixed(2)}</span>
         </div>
-        <form action="#" className={styles['card-controls']}>
-          <select name="amount">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-          <button type="submit">+</button>
-        </form>
+        <div className={styles['card-controls']}>
+          <span>€{data.price.toFixed(2)}</span>
+          <form action="#">
+            <select name="amount">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+            <button type="submit">+</button>
+          </form>
+        </div>
       </div>
     </div>
   );

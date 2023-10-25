@@ -38,8 +38,7 @@
 .card-content {
   color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
+  flex-direction: column;
   padding: 1rem 1rem 0;
   border-top: 2px solid var(--red);
 }
@@ -59,6 +58,13 @@
 
 .card-controls {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-controls form {
+  display: flex;
+  align-items: stretch;
 }
 .card-controls select {
   outline: none;
