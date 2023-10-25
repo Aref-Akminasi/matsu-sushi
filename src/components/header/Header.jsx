@@ -1,11 +1,11 @@
 import sushiTable from '../../assets/sushi-table.jpg';
 import Container from '../container/container';
-import classes from './Header.module.css';
+import styles from './Header.module.css';
 
 const Header = () => {
   return (
-    <header>
-      <Container className={classes.adjustments}>
+    <header className={styles.header}>
+      <Container className={styles.adjustments}>
         <h1>Matsu Sushi</h1>
         <h2>松寿司</h2>
         <h2>Traditional Japanese Sushi Restaurant</h2>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
-header {
+.header {
   font-family: 'Libre Baskerville', serif;
   font-weight: 400;
   color: white;
@@ -17,7 +17,7 @@ header {
   flex-direction: column;
 }
 
-header::after {
+.header::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -25,24 +25,26 @@ header::after {
   opacity: 60%;
 }
 
-h1 {
-  font-size: 2rem;
+.header h1 {
+  font-size: 2.5rem;
   font-weight: inherit;
+  margin: 2rem 0;
 }
 
-h2 {
+.header h2 {
   font-size: 1.5rem;
   font-weight: inherit;
+  margin: 1rem 0;
 }
 
-h2:first-of-type {
+.header h2:first-of-type {
   font-family: 'Noto Sans JP', sans-serif;
   color: var(--red);
   font-size: 3rem;
   font-weight: 300;
 }
 
-h3 {
+.header h3 {
   font-size: 1rem;
   font-weight: inherit;
 }
@@ -54,10 +56,10 @@ h3 {
 }
 
 @media screen and (min-width: 1020px) {
-  h1 {
+  .header h1 {
     font-size: 3rem;
   }
-  h2 {
+  .header h2 {
     font-size: 2rem;
   }
 }

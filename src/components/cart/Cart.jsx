@@ -1,13 +1,17 @@
 import CartIcon from './CartIcon';
-import classes from './Cart.module.css';
+import styles from './Cart.module.css';
 import { useState } from 'react';
+import { useContext } from 'react';
+import CartContext from '../../../cart-context/CartContext';
 
 const Cart = () => {
   const [amountOfItems, setAmountOfItems] = useState(0);
+  const value = useContext(CartContext);
+  console.log(value);
   return (
-    <div className={classes.cart}>
+    <div className={styles.cart}>
       <CartIcon />
-      <span>{amountOfItems}</span>
+      <span>{value}</span>
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import Logo from '../Logo';
 import Cart from '../cart/Cart';
 import Container from '../container/container';
-import classes from './Nav.module.css';
+import styles from './Nav.module.css';
 
 const Nav = () => {
   return (
-    <nav>
-      <Container className={classes.adjustments}>
+    <nav className={styles.nav}>
+      <Container className={styles.adjustments}>
         <Logo />
         <ul>
           <li>

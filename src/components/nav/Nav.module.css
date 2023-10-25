@@ -1,4 +1,4 @@
-nav {
+.nav {
   font-family: 'Libre Baskerville', serif;
   background-color: var(--light-black);
   padding: 1.5rem 5rem;
@@ -15,7 +15,7 @@ nav {
   justify-content: space-between;
 }
 
-nav ul {
+.nav ul {
   margin: 2rem 0 0 0;
   list-style-type: none;
   display: flex;
@@ -23,11 +23,11 @@ nav ul {
   justify-content: space-between;
 }
 
-nav ul li {
+.nav ul li {
   padding: 0 1.5rem;
 }
 
-nav ul li a {
+.nav ul li a {
   letter-spacing: 0.125rem;
   color: white;
   font-size: 1rem;
@@ -35,7 +35,7 @@ nav ul li a {
 }
 
 @media screen and (min-width: 1020px) {
-  nav ul {
+  .nav ul {
     margin: 0;
   }
   .adjustments {
