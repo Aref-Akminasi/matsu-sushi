@@ -1,16 +1,16 @@
 import styles from './MenuCard.module.css';
 
-const MenuCard = () => {
+const MenuCard = ({ data }) => {
   return (
     <div className={styles['menu-card']}>
       <div className={styles['card-img']}>
-        <img src="https://cdn.sanity.io/images/3z8b2row/production/ec0ed0519b54f4ce54c4bf35cd729bb811459e75-501x501.png" />
+        <img src={data.imgUrl} />
       </div>
       <div className={styles['card-content']}>
         <div className={styles['card-info']}>
-          <h3>Salmon</h3>
-          <p>Delicious salmon with rice</p>
-          <span>€2,45</span>
+          <h3>{data.name}</h3>
+          <p>{data.description}</p>
+          <span>€{data.price.toFixed(2)}</span>
         </div>
         <form action="#" className={styles['card-controls']}>
           <select name="amount">

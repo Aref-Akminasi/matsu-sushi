@@ -5,9 +5,7 @@ import { useContext } from 'react';
 import CartContext from '../../../cart-context/CartContext';
 
 const Cart = () => {
-  const [amountOfItems, setAmountOfItems] = useState(0);
   const value = useContext(CartContext);
-  console.log(value);
   return (
     <div className={styles.cart}>
       <CartIcon />
