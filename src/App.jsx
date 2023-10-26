@@ -6,6 +6,7 @@ import CartContext from '../cart-context/CartContext';
 import { useEffect, useState } from 'react';
 import MenuSection from './components/menu-section/MenuSection';
 import { client } from '../sanity-client/sanity';
+import AboutUs from './components/about-us/AboutUs';
 
 function App() {
   const [amount, setAmount] = useState(10);
@@ -35,6 +36,7 @@ function App() {
         categories.map((category) => (
           <MenuSection key={category.title} data={category} />
         ))}
+      <AboutUs />
       <Footer />
     </CartContext.Provider>
   );
