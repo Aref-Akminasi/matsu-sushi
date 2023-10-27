@@ -5,7 +5,7 @@ import styles from './Header.module.css';
 const Header = () => {
   return (
     <header className={styles.header}>
-      <Container className={styles.adjustments}>
+      <Container className={styles.container}>
         <h1>Matsu Sushi</h1>
         <h2>松寿司</h2>
         <h2>Traditional Japanese Sushi Restaurant</h2>

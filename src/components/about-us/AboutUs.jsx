@@ -5,7 +5,7 @@ import styles from './AboutUs.module.css';
 const AboutUs = () => {
   return (
     <section className={styles['about-section']}>
-      <Container className={styles.adjustments}>
+      <Container className={styles.container}>
         <img src={aboutImg} />
         <p>
           Nestled in the heart of the city, Matsu Sushi serves as a beacon for
