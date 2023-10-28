@@ -7,10 +7,12 @@ import { useEffect, useState } from 'react';
 import MenuSection from './components/menu-section/MenuSection';
 import { client } from '../sanity-client/sanity';
 import AboutUs from './components/about-us/AboutUs';
+import Basket from './components/basket/Basket';
 
 function App() {
-  const [amount, setAmount] = useState(10);
+  const [amount, setAmount] = useState(0);
   const [categories, setCategories] = useState(null);
+  const [basketIsDisplayed, setBasketIsDisplayed] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -29,7 +31,8 @@ function App() {
   }, []);
 
   return (
-    <CartContext.Provider value={amount} data={categories}>
+    <CartContext.Provider value={{ amount, categories, setBasketIsDisplayed }}>
+      {basketIsDisplayed && <Basket />}
       <Nav />
       <Header />
       {categories &&

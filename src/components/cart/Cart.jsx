@@ -1,15 +1,20 @@
 import CartIcon from './CartIcon';
 import styles from './Cart.module.css';
-import { useState } from 'react';
 import { useContext } from 'react';
 import CartContext from '../../../cart-context/CartContext';
 
 const Cart = () => {
-  const value = useContext(CartContext);
+  const { amount } = useContext(CartContext);
+  const { setBasketIsDisplayed } = useContext(CartContext);
+
+  const basketDisplayHandler = () => {
+    setBasketIsDisplayed(true);
+  };
+
   return (
-    <div className={styles.cart}>
+    <div className={styles.cart} onClick={basketDisplayHandler}>
       <CartIcon />
-      <span>{value}</span>
+      <span>{amount}</span>
     </div>
   );
 };

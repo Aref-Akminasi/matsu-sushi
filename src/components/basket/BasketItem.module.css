@@ -1,0 +1,74 @@
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 1rem;
+}
+
+.card-img::before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  background-color: var(--dark-red);
+  border-radius: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.card-img img {
+  width: 140px;
+  height: 140px;
+}
+
+.card-info {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card {
+  max-width: 138px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card > *:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.card-controls {
+  display: flex;
+  align-items: stretch;
+}
+
+.card-controls span {
+  padding: 0.5rem;
+  color: black;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-controls button {
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 0.7rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.card-controls button:first-child {
+  border-radius: 25% 0 0 25%;
+}
+
+.card-controls button:last-child {
+  border-radius: 0 25% 25% 0;
+}
+
+.sub-total {
+  font-weight: 700;
+}
