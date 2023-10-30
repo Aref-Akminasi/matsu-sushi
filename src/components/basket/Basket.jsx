@@ -37,7 +37,7 @@ const Basket = () => {
         </div>
       </div>
     </>,
-    document.getElementById('backdrop')
+    document.getElementById('overlay')
   );
 };
 
