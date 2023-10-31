@@ -10,10 +10,10 @@ const Nav = () => {
         <Logo />
         <ul>
           <li>
-            <a href="#">Menu</a>
+            <a href="#categories">Menu</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
             <Cart />

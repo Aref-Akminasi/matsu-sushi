@@ -35,10 +35,12 @@ function App() {
       {basketIsDisplayed && <Basket />}
       <Nav />
       <Header />
-      {categories &&
-        categories.map((category) => (
-          <MenuSection key={category.title} data={category} />
-        ))}
+      <div id="categories">
+        {categories &&
+          categories.map((category) => (
+            <MenuSection key={category.title} data={category} />
+          ))}
+      </div>
       <AboutUs />
       <Footer />
     </CartContext.Provider>
