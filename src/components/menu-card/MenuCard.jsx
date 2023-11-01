@@ -1,6 +1,18 @@
 import styles from './MenuCard.module.css';
+import { useContext, useState } from 'react';
+import CartContext from '../../../cart-context/CartContext';
 
 const MenuCard = ({ data }) => {
+  const [amount, setAmount] = useState(1);
+  const { dispatch } = useContext(CartContext);
+  const submitHanlder = (e) => {
+    e.preventDefault();
+    dispatch({ type: 'add', id: data._id, amount: amount, price: data.price });
+  };
+
+  const amountHandler = (e) => {
+    setAmount(Number(e.target.value));
+  };
   return (
     <div className={styles['menu-card']}>
       <div className={styles['card-img']}>
@@ -13,8 +25,8 @@ const MenuCard = ({ data }) => {
         </div>
         <div className={styles['card-controls']}>
           <span>€{data.price.toFixed(2)}</span>
-          <form action="#">
-            <select name="amount">
+          <form action="#" onSubmit={submitHanlder}>
+            <select name="amount" defaultValue="1" onChange={amountHandler}>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>

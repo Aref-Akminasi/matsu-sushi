@@ -6,7 +6,7 @@ import Close from './Close';
 import BasketItem from './BasketItem';
 
 const Basket = () => {
-  const { setBasketIsDisplayed } = useContext(CartContext);
+  const { setBasketIsDisplayed, basketContents } = useContext(CartContext);
 
   const basketDisplayHandler = () => {
     setBasketIsDisplayed(false);
@@ -21,15 +21,9 @@ const Basket = () => {
           <Close onClick={basketDisplayHandler} />
         </nav>
         <div className={styles['basket-items']}>
-          <BasketItem />
-          <BasketItem />
-          <BasketItem />
-          <BasketItem />
-          <BasketItem />
-          <BasketItem />
-          <BasketItem />
-          <BasketItem />
-          <BasketItem />
+          {basketContents.map((item) => {
+            return <BasketItem key={item.id} />;
+          })}
         </div>
         <div className={styles['basket-controls']}>
           <span>Total: €27,00</span>

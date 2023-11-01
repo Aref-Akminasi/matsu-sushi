@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import CartContext from '../../../cart-context/CartContext';
 
 const Cart = () => {
-  const { amount } = useContext(CartContext);
+  const { basketContents } = useContext(CartContext);
   const { setBasketIsDisplayed } = useContext(CartContext);
 
   const basketDisplayHandler = () => {
@@ -14,7 +14,7 @@ const Cart = () => {
   return (
     <div className={styles.cart} onClick={basketDisplayHandler}>
       <CartIcon />
-      <span>{amount}</span>
+      <span>{basketContents.length}</span>
     </div>
   );
 };
