@@ -1,7 +1,17 @@
 import styles from './BasketItem.module.css';
 import Delete from './Delete';
+import { useContext } from 'react';
+import CartContext from '../../../cart-context/CartContext';
 
 const BasketItem = ({ data }) => {
+  const { dispatch } = useContext(CartContext);
+  const add = () => {
+    dispatch({
+      type: 'add',
+      amount: 1,
+      id: data.id,
+    });
+  };
   console.log(data);
   return (
     <div className={styles.card}>
@@ -16,7 +26,7 @@ const BasketItem = ({ data }) => {
         <div className={styles['card-controls']}>
           <button>-</button>
           <span>{data.amount}</span>
-          <button>+</button>
+          <button onClick={add}>+</button>
         </div>
         <Delete />
         <span>
