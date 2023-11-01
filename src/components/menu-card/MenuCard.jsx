@@ -7,7 +7,15 @@ const MenuCard = ({ data }) => {
   const { dispatch } = useContext(CartContext);
   const submitHanlder = (e) => {
     e.preventDefault();
-    dispatch({ type: 'add', id: data._id, amount: amount, price: data.price });
+    dispatch({
+      type: 'add',
+      id: data._id,
+      amount: amount,
+      price: data.price,
+      imgUrl: data.imgUrl,
+      name: data.name,
+      description: data.description,
+    });
   };
 
   const amountHandler = (e) => {

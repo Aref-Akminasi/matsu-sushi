@@ -1,24 +1,31 @@
 import styles from './BasketItem.module.css';
 import Delete from './Delete';
 
-const BasketItem = () => {
+const BasketItem = ({ data }) => {
+  console.log(data);
   return (
     <div className={styles.card}>
       <div className={styles['card-img']}>
-        <img src="https://cdn.sanity.io/images/3z8b2row/production/ec0ed0519b54f4ce54c4bf35cd729bb811459e75-501x501.png" />
+        <img src={data.imgUrl} />
       </div>
       <div className={styles['card-info']}>
-        <h3>Eggs</h3>
-        <p>Delicious salmon with rice </p>
-        <span>€3,00</span>
+        <h3>{data.name}</h3>
+        <p>{data.description}</p>
       </div>
-      <div className={styles['card-controls']}>
-        <button>-</button>
-        <span>3</span>
-        <button>+</button>
+      <div className={styles['controls-wrapper']}>
+        <div className={styles['card-controls']}>
+          <button>-</button>
+          <span>{data.amount}</span>
+          <button>+</button>
+        </div>
+        <Delete />
+        <span>
+          {data.amount}x €{data.basePrice}
+        </span>
+        <span className={styles['sub-total']}>
+          €{(data.amount * data.basePrice).toFixed(2)}
+        </span>
       </div>
-      <Delete />
-      <span className={styles['sub-total']}>€9,00</span>
     </div>
   );
 };

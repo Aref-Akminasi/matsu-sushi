@@ -83,6 +83,10 @@
   height: 2rem;
 }
 
+.card-controls button:active {
+  transform: scale(0.98);
+}
+
 @media screen and (min-width: 600px) {
   .menu-card {
     margin: 2rem;

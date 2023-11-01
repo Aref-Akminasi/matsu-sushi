@@ -21,12 +21,16 @@ const Basket = () => {
           <Close onClick={basketDisplayHandler} />
         </nav>
         <div className={styles['basket-items']}>
-          {basketContents.map((item) => {
-            return <BasketItem key={item.id} />;
-          })}
+          {basketContents.length > 0 ? (
+            basketContents.map((item) => (
+              <BasketItem key={item.id} data={item} />
+            ))
+          ) : (
+            <h3>Basket is empty</h3>
+          )}
         </div>
         <div className={styles['basket-controls']}>
-          <span>Total: €27,00</span>
+          <span>Total: €0</span>
           <button onClick={basketDisplayHandler}>Checkout</button>
         </div>
       </div>

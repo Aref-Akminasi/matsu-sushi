@@ -22,16 +22,22 @@ const updateBasket = (basketContents, action) => {
       };
       const idx = itemIdx();
       basketContents[idx] = {
-        id: action.id,
+        ...basketContents[idx],
         amount: basketContents[idx].amount + action.amount,
-        basePrice: action.price,
       };
       return [...basketContents];
       //in case the item has not been added, a new item will be created with the id and the chosen amount
     } else {
       return [
         ...basketContents,
-        { id: action.id, amount: action.amount, basePrice: action.price },
+        {
+          id: action.id,
+          amount: action.amount,
+          basePrice: action.price,
+          imgUrl: action.imgUrl,
+          name: action.name,
+          description: action.description,
+        },
       ];
     }
   }

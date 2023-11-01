@@ -18,8 +18,7 @@
 }
 
 .card-img img {
-  width: 140px;
-  height: 140px;
+  max-width: 120px;
 }
 
 .card-info {
@@ -28,6 +27,7 @@
 }
 
 .card {
+  padding: 0.5rem;
   max-width: 138px;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,17 @@
 .card > *:not(:first-child) {
   margin-top: 1rem;
 }
+.controls-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
 
+.controls-wrapper > *:not(:first-child) {
+  margin-top: 1rem;
+}
 .card-controls {
   display: flex;
   align-items: stretch;

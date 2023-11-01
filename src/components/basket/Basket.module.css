@@ -76,6 +76,7 @@
 
 .basket-items {
   display: flex;
+  align-items: stretch;
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
