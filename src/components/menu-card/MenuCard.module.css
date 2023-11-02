@@ -79,8 +79,7 @@
   background-color: var(--red);
   outline: none;
   border: none;
-  width: 2rem;
-  height: 2rem;
+  padding: 0.5rem;
 }
 
 .card-controls button:active {
