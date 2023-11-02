@@ -17,4 +17,9 @@
   border-radius: 100%;
   width: 1rem;
   height: 1rem;
+  transition: transform 300ms;
+}
+
+.cart.active span {
+  transform: scale(1.15);
 }
