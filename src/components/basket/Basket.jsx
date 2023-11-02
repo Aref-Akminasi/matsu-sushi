@@ -12,6 +12,13 @@ const Basket = () => {
     setBasketIsDisplayed(false);
   };
 
+  const calculateTotalPrice = () => {
+    let totalPrice = 0;
+    basketContents.forEach(
+      (item) => (totalPrice += item.amount * item.basePrice)
+    );
+    return `${totalPrice.toFixed(2)}`;
+  };
   return createPortal(
     <>
       <div className={styles.backdrop} onClick={basketDisplayHandler}></div>
@@ -30,7 +37,7 @@ const Basket = () => {
           )}
         </div>
         <div className={styles['basket-controls']}>
-          <span>Total: €0</span>
+          <span>Total: €{calculateTotalPrice()}</span>
           <button onClick={basketDisplayHandler}>Checkout</button>
         </div>
       </div>

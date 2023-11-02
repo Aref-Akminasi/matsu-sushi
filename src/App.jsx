@@ -62,7 +62,7 @@ const updateBasket = (basketContents, action) => {
     } else {
       basketContents[idx] = {
         ...basketContents[idx],
-        amount: basketContents[idx].amount + action.amount,
+        amount: action.amount,
       };
       return [...basketContents];
     }

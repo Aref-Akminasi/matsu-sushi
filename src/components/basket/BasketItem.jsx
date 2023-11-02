@@ -16,12 +16,12 @@ const BasketItem = ({ data }) => {
   const removeHandler = () => {
     dispatch({
       type: 'remove',
-      amount: -1,
+      amount: data.amount - 1,
       id: data.id,
     });
   };
 
-  const removeAllHandler = () => {
+  const deleteHandler = () => {
     dispatch({
       type: 'remove',
       amount: 0,
@@ -43,7 +43,7 @@ const BasketItem = ({ data }) => {
           <span>{data.amount}</span>
           <button onClick={addHandler}>+</button>
         </div>
-        <Delete onClick={removeAllHandler} />
+        <Delete onClick={deleteHandler} />
         <span>
           {data.amount}x €{data.basePrice}
         </span>
