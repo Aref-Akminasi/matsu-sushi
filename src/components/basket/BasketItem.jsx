@@ -5,14 +5,29 @@ import CartContext from '../../../cart-context/CartContext';
 
 const BasketItem = ({ data }) => {
   const { dispatch } = useContext(CartContext);
-  const add = () => {
+  const addHandler = () => {
     dispatch({
       type: 'add',
       amount: 1,
       id: data.id,
     });
   };
-  console.log(data);
+
+  const removeHandler = () => {
+    dispatch({
+      type: 'remove',
+      amount: -1,
+      id: data.id,
+    });
+  };
+
+  const removeAllHandler = () => {
+    dispatch({
+      type: 'remove',
+      amount: 0,
+      id: data.id,
+    });
+  };
   return (
     <div className={styles.card}>
       <div className={styles['card-img']}>
@@ -24,11 +39,11 @@ const BasketItem = ({ data }) => {
       </div>
       <div className={styles['controls-wrapper']}>
         <div className={styles['card-controls']}>
-          <button>-</button>
+          <button onClick={removeHandler}>-</button>
           <span>{data.amount}</span>
-          <button onClick={add}>+</button>
+          <button onClick={addHandler}>+</button>
         </div>
-        <Delete />
+        <Delete onClick={removeAllHandler} />
         <span>
           {data.amount}x €{data.basePrice}
         </span>
