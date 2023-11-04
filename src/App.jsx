@@ -67,6 +67,10 @@ const updateBasket = (basketContents, action) => {
       return [...basketContents];
     }
   }
+
+  if (action.type === 'checkout') {
+    return [];
+  }
 };
 
 function App() {

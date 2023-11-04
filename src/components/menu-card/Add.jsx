@@ -10,9 +10,9 @@ const Add = () => {
       <path
         d="M200 400H600M400 200V600"
         stroke="white"
-        stroke-width="66.6667"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="66.6667"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

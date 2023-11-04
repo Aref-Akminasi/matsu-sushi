@@ -6,10 +6,15 @@ import Close from './Close';
 import BasketItem from './BasketItem';
 
 const Basket = () => {
-  const { setBasketIsDisplayed, basketContents } = useContext(CartContext);
+  const { setBasketIsDisplayed, basketContents, dispatch } =
+    useContext(CartContext);
 
   const basketDisplayHandler = () => {
     setBasketIsDisplayed(false);
+  };
+
+  const checkoutHandler = () => {
+    dispatch({ type: 'checkout' });
   };
 
   const calculateTotalPrice = () => {
@@ -38,7 +43,7 @@ const Basket = () => {
         </div>
         <div className={styles['basket-controls']}>
           <span>Total: €{calculateTotalPrice()}</span>
-          <button onClick={basketDisplayHandler}>Checkout</button>
+          <button onClick={checkoutHandler}>Checkout</button>
         </div>
       </div>
     </>,
