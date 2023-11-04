@@ -1,8 +1,52 @@
-# React + Vite
+# Matsu Sushi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Matsu Sushi is a fictional restaurant where you can order sushi through an ordering system tool. The system was created with a Sanity CMS infrastructure, where categories are added along with sushi items per category.
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [Functionality](#functionality)
+  - [Screenshots](#screenshots)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
+
+## Overview
+
+### Functionality
+
+Users should be able to:
+
+- Add sushi items to the basket.
+- Add change the amount of sushi items to be added.
+- Change the amount of each item in the basket.
+
+### Screenshots
+
+![](/screenshots/screenshot1.png)
+
+### Links
+
+- Live Site URL: [Firebase](https://matsu-sushi-9ec4b.web.app/)
+
+## My process
+
+### Built with
+
+- React.js
+- CSS modules
+- Sanity
+
+### What I learned
+
+- React useReducer hook.
+- React useContext hook.
+
+## Author
+
+**Aref Akminasi**
+
+- LinkedIn - [Aref Akminasi](https://www.linkedin.com/in/aref-akminasi-91412b207/)
+- Twitter - [@aref_akminasi](https://twitter.com/aref_akminasi)
