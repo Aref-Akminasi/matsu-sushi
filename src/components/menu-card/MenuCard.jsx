@@ -1,6 +1,7 @@
 import styles from './MenuCard.module.css';
 import { useContext, useState } from 'react';
 import CartContext from '../../../cart-context/CartContext';
+import Add from './Add';
 
 const MenuCard = ({ data }) => {
   const [amount, setAmount] = useState(1);
@@ -46,7 +47,9 @@ const MenuCard = ({ data }) => {
               <option value="9">9</option>
               <option value="10">10</option>
             </select>
-            <button type="submit">+</button>
+            <button type="submit" aria-label="Add">
+              <Add />
+            </button>
           </form>
         </div>
       </div>

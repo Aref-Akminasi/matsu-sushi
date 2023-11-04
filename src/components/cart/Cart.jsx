@@ -12,6 +12,14 @@ const Cart = () => {
     setBasketIsDisplayed(true);
   };
 
+  const totalItems = () => {
+    let totalAmount = 0;
+    basketContents.forEach((item) => {
+      totalAmount += item.amount;
+    });
+    return totalAmount;
+  };
+
   useEffect(() => {
     setActive(true);
     setTimeout(() => setActive(false), 300);
@@ -23,7 +31,7 @@ const Cart = () => {
       onClick={basketDisplayHandler}
     >
       <CartIcon />
-      <span>{basketContents.length}</span>
+      <span>{totalItems()}</span>
     </div>
   );
 };
