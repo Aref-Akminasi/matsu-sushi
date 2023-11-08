@@ -86,6 +86,30 @@
   transform: scale(0.98);
 }
 
+.add {
+  position: relative;
+}
+
+.cart-animation {
+  position: absolute;
+  right: 50%;
+  top: -24px;
+  animation: slideup 550ms;
+  transform: translateX(50%);
+}
+
+@keyframes slideup {
+  from {
+    top: -24px;
+    opacity: 70%;
+  }
+
+  to {
+    top: -48px;
+    opacity: 0%;
+  }
+}
+
 @media screen and (min-width: 600px) {
   .menu-card {
     margin: 2rem;

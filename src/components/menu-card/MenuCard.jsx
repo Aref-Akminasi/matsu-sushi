@@ -2,8 +2,10 @@ import styles from './MenuCard.module.css';
 import { useContext, useState } from 'react';
 import CartContext from '../../../cart-context/CartContext';
 import Add from './Add';
+import CartAnimation from './CartAnimation';
 
 const MenuCard = ({ data }) => {
+  const [isAdded, setIsAdded] = useState(false);
   const [amount, setAmount] = useState(1);
   const { dispatch } = useContext(CartContext);
   const submitHanlder = (e) => {
@@ -17,10 +19,16 @@ const MenuCard = ({ data }) => {
       name: data.name,
       description: data.description,
     });
+    isAddedHandler();
   };
 
   const amountHandler = (e) => {
     setAmount(Number(e.target.value));
+  };
+
+  const isAddedHandler = () => {
+    setIsAdded(true);
+    setTimeout(() => setIsAdded(false), 500);
   };
   return (
     <div className={styles['menu-card']}>
@@ -47,7 +55,10 @@ const MenuCard = ({ data }) => {
               <option value="9">9</option>
               <option value="10">10</option>
             </select>
-            <button type="submit" aria-label="Add">
+            <button type="submit" aria-label="Add" className={styles.add}>
+              {isAdded && (
+                <CartAnimation className={styles['cart-animation']} />
+              )}
               <Add />
             </button>
           </form>
