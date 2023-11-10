@@ -28,7 +28,7 @@ const MenuCard = ({ data }) => {
 
   const isAddedHandler = () => {
     setIsAdded(true);
-    setTimeout(() => setIsAdded(false), 450);
+    setTimeout(() => setIsAdded(false), 500);
   };
   return (
     <div className={styles['menu-card']}>

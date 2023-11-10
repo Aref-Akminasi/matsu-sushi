@@ -94,7 +94,7 @@
   position: absolute;
   right: 50%;
   top: -24px;
-  animation: slideup 500ms;
+  animation: slideup 550ms;
   transform: translateX(50%);
 }
 
